@@ -1,0 +1,134 @@
+HTML
+CSS
+DOM (Document Object Model)
+JavaScript
+
+
+HTML
+
+LOGO
+GW-BASIC
+
+JavaScript (ES5)
+
+Data Types
+    string, number (float), boolean, undefined, object, function
+    
+Programming Constructs
+    var, if else, switch case, for, while, try catch finally, throw, function
+
+APIs
+    Array, Date, Math, RegEx, setInterval, clearInterval, setTimeout, clearTimeout
+
+Unique aspects
+    truthy & falsy
+        0
+        ''
+        null
+        undefined
+        NaN
+        false
+
+
+strongly typed X loosely typed
+functional
+    functions are first class citizens
+    function = data
+static X dynamic
+
+javascript = loosely typed, functional and dynamic language
+
+class Employee{
+    public int id;
+    public string name;
+}
+
+Employee emp = new Employee();
+emp.id = 1000;
+emp.name = "Magesh";
+
+emp.salary = 10000;
+
+var obj = {}
+obj.id = 100;
+obj.name = 'Magesh'
+
+
+Function Invocation Patterns
+6 ways
+
+1. As a method of obj
+    this -> obj
+
+2. As a function
+    this -> global (window)
+
+3. using the call method of the function
+    this context can be set dynamically
+
+4. using the apply method of function
+    this context can be set dynamically
+
+5. As an IIFE (example : closure)
+
+6. using the 'new' keyword (for the constructor functions)
+
+It doesnot matter where the function is OR who owns the function. What matters is HOW THE FUNCTION IS INVOKED!!
+
+
+var spinner = /* ... */
+
+spinner.up() //=> 1
+spinner.up() //=> 2
+spinner.up() //=> 3
+
+spinner.down() //=> 2
+spinner.down() //=> 1
+spinner.down() //=> 0
+spinner.down() //=> -1
+
+
+spinner.counter = 10000
+spinner.up()
+
+
+
+var spinner = (function(){
+    var counter = 0;
+
+    function up(){
+        return ++counter;
+    }
+
+    function down(){
+        return --counter;
+    }
+
+    return {
+        up : up,
+        down : down
+    }
+})();
+
+function spinnerFactory(){
+    var counter = 0;
+
+    function up(){
+        return ++counter;
+    }
+
+    function down(){
+        return --counter;
+    }
+
+    return {
+        up : up,
+        down : down
+    }
+}
+
+
+constructor functions
+     invoked with the 'new' keyword
+        - this -> new object
+        - this -> returned by default
