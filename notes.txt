@@ -155,3 +155,33 @@ ES6 ( ECMAScript6, ES2015 )
 12. class
 
 http://es6-features.org
+
+
+Angular
+    Building Blocks
+
+    Component (View)
+        Presentation + UI Behavior + UI State
+
+    Pipe
+        Data transformation for presentation
+
+    Directive
+        DOM manipulation
+
+    Service
+        NON UI logic
+
+    Module
+        Registry of other application entities (components, pipes, directives, services)
+
+
+TypeScript
+    http://typscriptlang.org
+
+
+Chrome
+Visual Studio Code (http://code.visualstudio.com)
+Node.js (LTS) (http://nodejs.org)
+
+http://freecodecamp.org
