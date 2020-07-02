@@ -32,3 +32,4 @@ var discountedProducts = products.map(function(product){
 products.forEach(function(product){
     console.log(product.name, product.units);
 });
+

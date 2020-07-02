@@ -148,3 +148,10 @@ ES6 ( ECMAScript6, ES2015 )
 6. object destructuring
 7. rest operator (object)
 8. spread operator (object)
+9. object constructor
+10. arrow functions
+11. default arguments
+12. template strings
+12. class
+
+http://es6-features.org
