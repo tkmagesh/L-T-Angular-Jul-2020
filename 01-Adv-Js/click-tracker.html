@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Click Tracker</title>
     <script>
-        (function myApp(){
-            var counter = 0;
-            function onBtnTrackClick(){
-                ++counter;
+        (function myApp(){ //OF
+            var counter = 0; //V
+            function onBtnTrackClick(){ //IF
+                ++counter; //STEP 4
                 document.getElementById('divCounter').innerText = counter;
             }
             function onDocumentLoad(){
@@ -18,7 +18,6 @@
             }
             window.addEventListener('load', onDocumentLoad);
         })();
-        console.log('done');
         //myApp();
     </script>
 </head>
