@@ -8,9 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'first-app';
 
-  changeTitle(){
-    this.title = 'My New App';
+  changeTitle(newTitle : string){
+    this.title = newTitle;
   }
+  
   constructor(){
     /* setTimeout(() => {
       this.changeTitle();
