@@ -289,3 +289,13 @@ attribute directive
 structural directive
     changes the structure of the dom tree ( by adding a new dom node or removing an existing dom node)
     prefixed with an '*'
+
+
+SOLID Principles
+    S - SRP - Single Responsibility Principle
+    O - OCP - Open Closed Principle
+    L - LSP - Liskov's Substitution Principle
+    I - ISP - Interface Segregation Principle
+    D - DIP - Dependency Inversion Principle
+
+AGILE PRINCIPLES PATTERNS AND PRACTICES
