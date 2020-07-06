@@ -7,6 +7,7 @@ import { SalaryCalculatorComponent } from './salaryCalculator/salaryCalculator.c
 import { CalculatorTwoComponent } from './calculator/calculatorTwo.component';
 import { SalaryCalculatorModel } from './salaryCalculator/salaryCalculatorModel';
 
+
 /* 
 declarations - UI entities of the application (Components, Pipes, Directives)
 providers - NON UI entities of the application (Services)

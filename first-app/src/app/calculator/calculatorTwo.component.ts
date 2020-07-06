@@ -3,10 +3,14 @@ import { CalculatorModel } from "./calculatorModel";
 
 @Component({
     selector : 'app-calculator-2',
-    templateUrl: './calculatorTwo.component.html'
+    templateUrl: './calculatorTwo.component.html',
+    providers : [CalculatorModel]
 })
 export class CalculatorTwoComponent{
-    model : CalculatorModel = new CalculatorModel();
+    
+    constructor(public model : CalculatorModel){
+        
+    }
 
     selectedOperator : string = '';
 

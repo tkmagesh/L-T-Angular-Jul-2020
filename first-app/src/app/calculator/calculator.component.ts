@@ -3,8 +3,11 @@ import { CalculatorModel } from "./calculatorModel";
 @Component({
     selector : 'app-calculator', 
     templateUrl : './calculator.component.html',
-    styleUrls : ['./calculator.component.css']
+    styleUrls : ['./calculator.component.css'],
+    providers : [CalculatorModel]
 })
 export class CalculatorComponent{
-    model : CalculatorModel = new CalculatorModel();
+    constructor(public model : CalculatorModel){
+        
+    }
 }
