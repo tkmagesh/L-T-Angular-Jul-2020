@@ -6,7 +6,7 @@ import { CalculatorComponent } from "./calculator/calculator.component";
 import { SalaryCalculatorComponent } from './salaryCalculator/salaryCalculator.component';
 import { CalculatorTwoComponent } from './calculator/calculatorTwo.component';
 import { SalaryCalculatorModel } from './salaryCalculator/salaryCalculatorModel';
-import { ProductsComponent, ProductsComponent } from "./products/products.component";
+import { ProductsComponent } from "./products/products.component";
 
 /* 
 declarations - UI entities of the application (Components, Pipes, Directives)
