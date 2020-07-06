@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { CalculatorComponent } from "./calculator/calculator.component";
 import { SalaryCalculatorComponent } from './salaryCalculator/salaryCalculator.component';
 import { CalculatorTwoComponent } from './calculator/calculatorTwo.component';
+import { SalaryCalculatorModel } from './salaryCalculator/salaryCalculatorModel';
+
 /* 
 declarations - UI entities of the application (Components, Pipes, Directives)
 providers - NON UI entities of the application (Services)
@@ -23,7 +25,9 @@ bootstrap - root component(s)
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    SalaryCalculatorModel
+  ],
   bootstrap: [
     AppComponent
     , CalculatorComponent

@@ -280,3 +280,12 @@ Visual Studio Code (http://code.visualstudio.com)
 Node.js (LTS) (http://nodejs.org)
 
 http://freecodecamp.org
+
+attribute directive
+    that manipulates the attributes of an existing dom node
+    DOES NOT change the structure of the dom tree ( by adding a new dom node or removing an existing dom node)
+    enclosed by a '[]'
+
+structural directive
+    changes the structure of the dom tree ( by adding a new dom node or removing an existing dom node)
+    prefixed with an '*'

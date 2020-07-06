@@ -8,5 +8,19 @@ import { SalaryCalculatorModel } from "./salaryCalculatorModel";
     styleUrls: ['./salaryCalculator.component.css']
 })
 export class SalaryCalculatorComponent{
-    model : SalaryCalculatorModel = new SalaryCalculatorModel();
+    //The following is to be strictly avoided as it is in violation of "Dependency Inversion Principle"
+    //model : SalaryCalculatorModel = new SalaryCalculatorModel()
+
+    /* 
+    model : SalaryCalculatorModel = null;
+
+    constructor(model : SalaryCalculatorModel){
+        this.model = model;
+    } 
+    */
+
+    constructor(public model: SalaryCalculatorModel) {
+        
+    }
+
 }
