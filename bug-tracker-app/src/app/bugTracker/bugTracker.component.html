@@ -24,11 +24,14 @@
             <span class="bugname"
                 (click)="onBugNameClick(bug)"
                 [ngClass]="{closed : bug.isClosed}"
-                >{{bug.name}}</span>
+                [title]="bug.name"
+            >
+                {{bug.name | trimText:40}}
+            </span>
             <div class="datetime">{{bug.createdAt}}</div>
             <input type="button" value="Remove" (click)="onRemoveClick(bug)">
         </li>
-    </ol>
+    </ol>  
     <input 
         type="button" 
         value="Remove Closed" 
