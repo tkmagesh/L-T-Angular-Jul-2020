@@ -1,5 +1,6 @@
 import { Bug } from "../models/Bug";
 
+
 export class BugStorageService{
     private currentBugId: number = 0;
     private storage = window.localStorage;
