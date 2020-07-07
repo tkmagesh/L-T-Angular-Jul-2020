@@ -10,30 +10,28 @@ export class BugTrackerComponent{
     bugs: Bug[] = [];
     newBugName : string = '';
 
-    constructor(private bugOperations : BugOperationsService, private bugStorage : BugStorageService){
-        this.bugs = this.bugStorage.getAll();
+    constructor(private bugOperations : BugOperationsService){
+        this.bugs = this.bugOperations.getAll();
     }
 
     onAddNewClick(){
         var newBug : Bug = this.bugOperations.createNew(this.newBugName);
-        this.bugStorage.save(newBug);
         this.bugs.push(newBug);
     }
 
     onRemoveClick(bugToRemove: Bug){
-        this.bugStorage.remove(bugToRemove);
+        this.bugOperations.remove(bugToRemove);
         this.bugs = this.bugs.filter(bug => bug !== bugToRemove);
     }
 
     onBugNameClick(bugToToggle : Bug){
         this.bugOperations.toggle(bugToToggle);
-        this.bugStorage.save(bugToToggle);
     }
 
     onRemoveClosedClick(){
-        const closedBugs = this.bugs.filter(bug => bug.isClosed);
-        closedBugs.forEach(closedBug => this.bugStorage.remove(closedBug));
-        this.bugs = this.bugStorage.getAll();
+        this.bugs
+            .filter(bug => bug.isClosed)
+            .forEach(closedBug => this.onRemoveClick(closedBug));
     }
 
     getClosedCount(){
