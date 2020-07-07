@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { Bug } from "./models/Bug";
 import { BugOperationsService } from "./services/bugOperations.service";
-import { BugStorageService } from "./services/bugStorage.service";
+
 @Component({
     selector : 'app-bug-tracker',
     templateUrl: './bugTracker.component.html'
@@ -37,8 +37,5 @@ export class BugTrackerComponent{
             .filter(bug => bug.isClosed)
             .forEach(closedBug => this.onRemoveClick(closedBug));
     }
-
-    getClosedCount(){
-        return this.bugs.reduce((result, bug) => bug.isClosed ? ++result : result, 0);
-    }
+    
 }
