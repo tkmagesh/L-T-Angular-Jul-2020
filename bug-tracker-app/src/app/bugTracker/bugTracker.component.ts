@@ -8,7 +8,7 @@ import { BugOperationsService } from "./services/bugOperations.service";
 })
 export class BugTrackerComponent{
     bugs: Bug[] = [];
-    newBugName : string = '';
+    
 
     sortAttr : string = '';
     sortDesc : boolean = false;
@@ -17,8 +17,7 @@ export class BugTrackerComponent{
         this.bugs = this.bugOperations.getAll();
     }
 
-    onAddNewClick(){
-        var newBug : Bug = this.bugOperations.createNew(this.newBugName);
+    onNewBugCreated(newBug : Bug){
         this.bugs = [...this.bugs, newBug];
     }
 
@@ -37,5 +36,5 @@ export class BugTrackerComponent{
             .filter(bug => bug.isClosed)
             .forEach(closedBug => this.onRemoveClick(closedBug));
     }
-    
+
 }
