@@ -7,7 +7,7 @@ import { BugTrackerComponent } from "./bugTracker/bugTracker.component";
 import { TrimTextPipe } from './bugTracker/pipes/trimText.pipe';
 
 import { BugOperationsService } from "./bugTracker/services/bugOperations.service";
-
+import { BugStorageService } from "./bugTracker/services/bugStorage.service";
 @NgModule({
   declarations: [
     AppComponent
@@ -19,6 +19,7 @@ import { BugOperationsService } from "./bugTracker/services/bugOperations.servic
   ],
   providers: [
     BugOperationsService
+    , BugStorageService
   ],
   bootstrap: [AppComponent]
 })
