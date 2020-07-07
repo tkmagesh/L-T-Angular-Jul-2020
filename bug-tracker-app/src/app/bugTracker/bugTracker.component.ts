@@ -10,6 +10,9 @@ export class BugTrackerComponent{
     bugs: Bug[] = [];
     newBugName : string = '';
 
+    sortAttr : string = '';
+    sortDesc : boolean = false;
+    
     constructor(private bugOperations : BugOperationsService){
         this.bugs = this.bugOperations.getAll();
     }

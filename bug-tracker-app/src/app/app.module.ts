@@ -6,6 +6,8 @@ import { BugTrackerComponent } from "./bugTracker/bugTracker.component";
 
 import { TrimTextPipe } from './bugTracker/pipes/trimText.pipe';
 import { ElapsedPipe } from "./bugTracker/pipes/elapsed.pipe";
+import { SortPipe } from "./bugTracker/pipes/sort.pipe";
+
 import { BugOperationsService } from "./bugTracker/services/bugOperations.service";
 import { BugStorageService } from "./bugTracker/services/bugStorage.service";
 @NgModule({
@@ -14,6 +16,7 @@ import { BugStorageService } from "./bugTracker/services/bugStorage.service";
     , BugTrackerComponent
     , TrimTextPipe
     , ElapsedPipe
+    , SortPipe
   ],
   imports: [
     BrowserModule
