@@ -12,14 +12,14 @@ export class BugTrackerComponent{
 
     sortAttr : string = '';
     sortDesc : boolean = false;
-    
+
     constructor(private bugOperations : BugOperationsService){
         this.bugs = this.bugOperations.getAll();
     }
 
     onAddNewClick(){
         var newBug : Bug = this.bugOperations.createNew(this.newBugName);
-        this.bugs.push(newBug);
+        this.bugs = [...this.bugs, newBug];
     }
 
     onRemoveClick(bugToRemove: Bug){
@@ -28,7 +28,8 @@ export class BugTrackerComponent{
     }
 
     onBugNameClick(bugToToggle : Bug){
-        this.bugOperations.toggle(bugToToggle);
+        const toggledBug = this.bugOperations.toggle(bugToToggle);
+        this.bugs = this.bugs.map(bug => bug.id === bugToToggle.id ? toggledBug : bug);
     }
 
     onRemoveClosedClick(){
