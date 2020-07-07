@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BugTrackerComponent } from "./bugTracker/bugTracker.component";
+import { BugStatsComponent } from "./bugTracker/views/bugStats.component";
 
 import { TrimTextPipe } from './bugTracker/pipes/trimText.pipe';
 import { ElapsedPipe } from "./bugTracker/pipes/elapsed.pipe";
@@ -15,6 +16,7 @@ import { BugStorageService } from "./bugTracker/services/bugStorage.service";
   declarations: [
     AppComponent
     , BugTrackerComponent
+    , BugStatsComponent
     , ClosedCountPipe
     , TrimTextPipe
     , ElapsedPipe
