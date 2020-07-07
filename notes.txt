@@ -299,3 +299,15 @@ SOLID Principles
     D - DIP - Dependency Inversion Principle
 
 AGILE PRINCIPLES PATTERNS AND PRACTICES
+
+Pure functions
+
+
+function add(x,y){
+    return x + y;
+}
+
+function addClient(x,y){
+    var result = add(x,y);
+    return result;
+}
