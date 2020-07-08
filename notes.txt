@@ -311,3 +311,67 @@ function addClient(x,y){
     var result = add(x,y);
     return result;
 }
+
+npx json-server db.json
+
+Asynchronous Programming
+
+Observable inverse of Enumerable
+        where Enumerable = Lazy Iterable
+
+
+var nos = [3,1,5,2,4];
+
+for(let index = 0, count=nos.length; index < count; index++){
+    let no = nos[index];
+}
+
+5000 products (id, name, cost, units, categories)
+    first 10 stationary products whose value is less than 100
+        where value = cost * units
+
+var stationaryProducts = products.filter(p => p.category === 'stationary')
+var productsWithValue = stationaryProducts.map(p => ({...p, value = p.cost * p.units}))
+var productsUnder100Value = productsWithValue.filter(pv => pv.value < 100);
+var first10Products = productsUnder100Value.first(10);
+
+
+for(let pv100 of first10Products)
+
+Enumerable is a collection that already has the data
+    Enumerable.next() => item
+
+Observable is a collection that will get the data in future (one after another across a timeline)
+    (it doesnt have the data at present)
+    Observable.onNext(observer)
+
+
+Event Driven Application
+
+employees.dat
+id, name, doj, city, .... salary
+
+open the file
+count = 0, sum = 0
+while (readfile){
+    var data = parse(line)
+    count++
+    sum += data.salary
+}
+avg = sum / count
+print avg
+close the file
+
+
+Rx.NET (Reactive Extensions)
+
+Observables
+Observers
+    filter
+    map
+    reduce
+    scan
+
+@angular/common/http
+    HttpClientModule
+    HttpClient
