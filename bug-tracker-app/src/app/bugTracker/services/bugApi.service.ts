@@ -2,11 +2,12 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Bug } from "../models/Bug";
 import { Injectable } from "@angular/core";
+import { environment } from "../../../environments/environment";
 
 @Injectable()
 export class BugApiService{
     
-    private serviceEndPoint = 'http://localhost:3000/bugs';
+    private serviceEndPoint = environment.serviceEndPoint;
     
     constructor(private httpClient : HttpClient ){
 

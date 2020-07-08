@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit} from "@angular/core";
 import { Bug } from "./models/Bug";
 import { BugOperationsService } from "./services/bugOperations.service";
 
@@ -7,14 +7,19 @@ import { BugOperationsService } from "./services/bugOperations.service";
     selector : 'app-bug-tracker',
     templateUrl: './bugTracker.component.html'
 })
-export class BugTrackerComponent{
+export class BugTrackerComponent implements OnInit {
     bugs: Bug[] = [];
-    
 
+    showStats : boolean = true;
+    
     sortAttr : string = '';
     sortDesc : boolean = false;
 
     constructor(private bugOperations : BugOperationsService){
+        
+    }
+
+    ngOnInit(){
         this.bugOperations
             .getAll()
             .subscribe(bugs => this.bugs = bugs);
