@@ -24,9 +24,10 @@ export class BugEditComponent{
     }
 
     onAddNewClick() {
-        var newBug: Bug = this.bugOperations.createNew(this.newBugName);
+        this.bugOperations
+            .createNew(this.newBugName)
+            .subscribe(newBug => this.bugCreated.emit(newBug));
         //the following line should be in the parent component
         //this.bugs = [...this.bugs, newBug];
-        this.bugCreated.emit(newBug);
     }
 }
